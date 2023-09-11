@@ -1,0 +1,94 @@
+@import"./variables";
+
+@mixin d-flex($jc: center, $al: center, $gap: 0px) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $al;
+    gap: $gap;
+}
+
+@mixin grid($grid-col: repeat(3, 1fr), $gap: 0px) {
+    display: grid;
+    grid-template-columns: $grid-col;
+    gap: $gap;
+}
+
+@mixin btn-effect {
+    cursor: pointer;
+    transform: translateY(-2px);
+    background-color: $clr-btn-primary-hover1;
+    transition: .3s all;
+
+}
+
+@mixin f-direction($fd: column) {
+    flex-direction: $fd;
+}
+
+// media query small devices
+@mixin mobile {
+    @media screen and (max-width:map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+
+// media query medium devices
+
+@mixin tab {
+    @media screen and (max-width:map-get($breakpoints, tab)) {
+        @content;
+    }
+}
+// media query medium devices
+
+@mixin tab-sm {
+    @media screen and (max-width:map-get($breakpoints, tab-sm)) {
+        @content;
+    }
+}
+
+// media large mobile devices
+
+@mixin desktop {
+    @media screen and (max-width:map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+@mixin image-fix {
+    min-width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 20px;
+    position: relative;
+}
+
+@mixin card-hover-effect($val:-5px) {
+    &:hover {
+        transform: translateY($val);
+        cursor: pointer;
+        box-shadow: 0 2px 40px rgba(39, 47, 57, .2);
+    }
+}
+
+// insta secttion image overlay
+
+@mixin insta-overlay($val){
+    background-color: $clr-bg-overlay;
+    position: absolute;
+    background-image: $val;
+    background-repeat: no-repeat;
+    background-size: 64px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-position: 50%;
+    opacity: 0;
+    transition: .5s all;
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+}
