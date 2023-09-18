@@ -201,6 +201,7 @@ header {
 
             @include tab {
                 flex-basis: 100%;
+                width: 100%;
             }
         }
 
@@ -224,6 +225,10 @@ header {
 
                 img:first-child {
                     @include image-fix;
+                    @include tab{
+                        min-width: none;
+                        width: 100%;
+                    }
                 }
             }
 
@@ -466,6 +471,9 @@ header {
                         border-radius: 20px;
                         transition: .5s all
                     }
+                    @include mobile{
+                        width: 100%
+                    }
                 }
 
                 @include card-hover-effect(0px);
@@ -590,10 +598,6 @@ header {
             }
 
             @include tab {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            @include mobile {
                 grid-template-columns: 1fr;
             }
         }
@@ -983,6 +987,9 @@ footer {
 
                 .company-address {
                     @include d-flex(flex-start, center, 20px);
+                    @include mobile{
+                        @include f-direction;
+                    }
 
                     .img-box {
                         width: 200px;

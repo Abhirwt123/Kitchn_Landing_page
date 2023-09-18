@@ -188,6 +188,7 @@ header .header-wrap .hamburger-transform {
 @media screen and (max-width: 968px) {
   .hero .hero-wrap .left-info-sec {
     flex-basis: 100%;
+    width: 100%;
   }
 }
 .hero .hero-wrap .right-img-sec {
@@ -213,6 +214,12 @@ header .header-wrap .hamburger-transform {
      object-fit: cover;
   border-radius: 20px;
   position: relative;
+}
+@media screen and (max-width: 968px) {
+  .hero .hero-wrap .right-img-sec .chief-img img:first-child {
+    min-width: none;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 968px) {
   .hero .hero-wrap .right-img-sec {
@@ -444,6 +451,11 @@ header .header-wrap .hamburger-transform {
   border-radius: 20px;
   transition: 0.5s all;
 }
+@media screen and (max-width: 484px) {
+  .recipe .recipe-wrap .recipe-card .item .img-box {
+    width: 100%;
+  }
+}
 .recipe .recipe-wrap .recipe-card .item:hover {
   transform: translateY(0px);
   cursor: pointer;
@@ -647,11 +659,6 @@ header .header-wrap .hamburger-transform {
   }
 }
 @media screen and (max-width: 968px) {
-  .follow-on-instagram .instagram-wrap .insta-card {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 484px) {
   .follow-on-instagram .instagram-wrap .insta-card {
     grid-template-columns: 1fr;
   }
@@ -1000,6 +1007,11 @@ footer .footer-wrap .lower-sec .details-box .company-address {
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
+}
+@media screen and (max-width: 484px) {
+  footer .footer-wrap .lower-sec .details-box .company-address {
+    flex-direction: column;
+  }
 }
 footer .footer-wrap .lower-sec .details-box .company-address .img-box {
   width: 200px;
