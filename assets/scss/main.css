@@ -14,12 +14,12 @@
 }
 @media screen and (max-width: 968px) {
   .container {
-    max-width: 780px;
+    padding: 20px;
   }
 }
 @media screen and (max-width: 484px) {
   .container {
-    max-width: 360px;
+    padding: 20px;
   }
 }
 
@@ -350,6 +350,12 @@ header .header-wrap .hamburger-transform {
   position: relative;
 }
 @media screen and (max-width: 968px) {
+  .family-bussiness .family-bussiness-wrap .left-sec .img-chief img {
+    min-width: none;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 968px) {
   .family-bussiness .family-bussiness-wrap .left-sec {
     flex-basis: 100%;
     width: 100%;
@@ -471,6 +477,11 @@ header .header-wrap .hamburger-transform {
 }
 .recipe .recipe-wrap .recipe-card .item .recipe-details .item-btn .read:hover {
   background-color: #1a1e24;
+}
+@media screen and (max-width: 484px) {
+  .recipe .recipe-wrap .recipe-card .item {
+    padding: 8px;
+  }
 }
 @media screen and (max-width: 968px) {
   .recipe .recipe-wrap .recipe-card {
@@ -629,6 +640,11 @@ header .header-wrap .hamburger-transform {
 .follow-on-instagram .instagram-wrap .insta-card .item .overlay6:hover {
   opacity: 1;
   cursor: pointer;
+}
+@media screen and (max-width: 484px) {
+  .follow-on-instagram .instagram-wrap .insta-card .item {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 968px) {
   .follow-on-instagram .instagram-wrap .insta-card {

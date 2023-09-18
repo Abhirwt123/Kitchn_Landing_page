@@ -19,11 +19,11 @@
     margin: 0 auto;
 
     @include tab {
-        max-width: 780px;
+        padding: 20px;
     }
 
     @include mobile {
-        max-width: 360px;
+        padding: 20px
     }
 
     ;
@@ -359,6 +359,10 @@ header {
             .img-chief {
                 img {
                     @include image-fix;
+                    @include tab{
+                        min-width: none;
+                        width: 100%;
+                    }
                 }
             }
 
@@ -502,6 +506,9 @@ header {
                     }
 
                 }
+                @include mobile{
+                    padding: 8px;
+                }
             }
 
             @include tab {
@@ -576,6 +583,9 @@ header {
 
                 .overlay6 {
                     @include insta-overlay(url(/assets/images/insta-overlay6.svg));
+                }
+                @include mobile {
+                   width: 100%;
                 }
             }
 
